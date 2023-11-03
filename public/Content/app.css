@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+/* The body tag style applies to all elements on the page */
+body {
+background:linear-gradient(46deg, #fffc33, #2D26EF);
+
+background:linear-gradient(1rad, #fffc33, #2D26EF);
+
+
+background:linear-gradient(to right, #fffc33, #2D26EF);
+background-color: #2D26EF;
+font-family: Trebuchet MS, Geneva, Arial, sans-serif;
+padding:0px;
+margin:0px;
+}
+/* The wrapper ID style is used with a div tag to provide a 960px wide page */
+/* Color scheme hexadecimal values: #2D26EF #FF5DEF #8747FE #088FFE #03A6CE */
+#wrapper {
+width: 960px;height: 800px;
+margin-left: auto;
+margin-right: auto;
+background-color:#8747FE;
+}
+/* The right-column ID style is floated right */
+#right-column {
+    float: right;
+    width: 600px;height: 600px;
+    }
+    /* The left-column ID style is floated left */
+    #left-column {
+    float: left;
+    width: 360px;background-color:#088FFE;
+    height:600px;
+    }
+    /* Defining a style for a set of tags separated by commas applies the style to
+    all tags */
+    h1,h2,h3,h4,h5,h6,p,li {
+    margin-left:15px;
+    }
+    #footer {
+        height:80px;
+        }
+    #banner{
+        height:120px;
+        background-color:#FF5DEF;
+           }
+    /* Defining a style for a set of tags not separated by commas applies the style
+    only to all tags within the preceding tag*/
+    #banner h1 {
+        color: rgb(8, 8, 8);
+            }
+
+    /* This clear class style terminates float */
+    .clear{
+        clear: both;
+        }
+    
