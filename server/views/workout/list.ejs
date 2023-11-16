@@ -1,0 +1,49 @@
+<%- include("../partials/header.ejs") %>
+<%- include("../partials/main_nav.ejs") %>
+
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-6 col-md-10">
+            <h1><%= title %></h1>
+            <a href="workout-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add an Excercise</a>
+            <br>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Sets</th>
+                    <th class="text-center col-1">Reps</th>
+                    <th class="text-center col-5">Description</th>
+                    <th class="text-center col-1">Target Muscle</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                </tr>
+                <!-- Repeat the template -->
+                <% for (let count = 0; count < Workoutlist.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= Workoutlist[count].name %></td>
+                        <td class="text-center col-2"><%= Workoutlist[count].sets %></td>
+                        <td class="text-center col-1"><%= Workoutlist[count].reps %></td>
+                        <td class="text-center col-5"><%= Workoutlist[count].description %></td>
+                        <td class="text-center col-1"><%= Workoutlist[count].targetMuscle %></td>
+                        <td class="text-center col-1">
+                            <a href="/workout/edit/<%= Workoutlist[count]._id %>"
+                                class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/workout/delete/<%= Workoutlist[count]._id %>"
+                                class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/bottom_nav.ejs') %>
+<%- include('../partials/footer.ejs') %>
